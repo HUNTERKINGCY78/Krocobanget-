@@ -1,0 +1,100 @@
+#data/data/com.termux/home/usr/apt
+clear
+termux-setup-storage -y
+clear
+pkg update
+echo -e "╔═══════════════════════════════╗"
+  echo -e "║ Anda memilih KANDURA          ║"
+  echo -e "╚═══════════════════════════════╝"
+  sleep 0.28
+  clear
+
+  # Menu KANDURA
+echo -e "\033[35;1m ⣀⢀⣠⣤⠴⠶⠚⠛⠉⣹⡇ ⢸     ⢰⣄    ⠈⢦⢰     ⠈⢳⡀⠈⢧    ⢸    "
+echo -e "\033[35;1m   ⠉   ⡏ ⢰⠃   ⣿⡇ ⢸⡀    ⢸⣸⡆   ⠰⣌⣧⡆ ⢷⡀  ⣄⢳  ⢣   ⢸   " 
+echo -e "\033[35;1m     ⡇ ⠘   ⢀⣿⣇ ⠸⡇⣆    ⣿⣿⡀   ⢹⣾⡇ ⢸⢣  ⠘⣿⣇ ⠈⢧  ⠘ ⢠  "
+echo -e "\033[35;1m    ⢀⡇ ⡀   ⢸⠈⢻⡄ ⢷⣿    ⢹⡏⣇ ⣀⣀ ⣿⣧ ⢸⠾⣇⣠⣄⣸⣿⡄ ⠘⡆    ⠆ "
+echo -e "\033[35;1m    ⣾⢿ ⠇   ⢸  ⢳⡀⢸⣿⡆   ⣬⣿⡿⠟⠋⠉⠙⠻⣽⣀⡏ ⠙⠃⢹⡙⡿⣷  ⢹    ⠰⠒          "
+echo -e "\033[35;1m   ⢸⣿⣿⣇⢸   ⢸⣦⣤⡀⣷⣸⡟⢧⣀⡴⠶⠿⠻⡄⣀⣤⣴⡾⠖⠚⠿⡀   ⠈⣧⠁⠹⠆  ⣇     "
+echo -e "\033[35;1m  ⢀⢸⣀⣼⣿⣼⡆ ⢀⡘⡇  ⠹⡟⢷⡜⢉⣠⣠⣠⣀⣤⡿⣛⣥⣶⣾⡿⠛⠿⠿⣶⣦⡤⢹ ⢀   ⢹⡄    "
+echo -e "\033[35;1m  ⢸⢸⡛⠁ ⠙⢿⠋⠉⠉⠻   ⢿⣄⠈⠁   ⢉⢟⣴⡿⠿⠟\033[31;1m⢁⠇   \033[35;1m ⠹⣿⠻⡇⢸   ⠈⣷    "
+echo -e "\033[35;1m ⣀⣀⣘⣿⡇ ⢀⣠⣤⣶⣶⣶⣾⣦⡀ ⠈⡿      ⣿⠟\033[31;1m⠳⠦⡤⠊    \033[35;1m ⣸⠇ ⡇⣼ ⢰  ⢹⣇   "
+echo -e "\033[35;1m⠛⠁⠈⣿⣷⣧⣴⣿⠿⠛⣿⠿⣿⣿⡿⠗         ⠁  ⣠⣴⣶⠿⠿⠿⡷⢛⠕⠷⡄⣧⣿ ⢸  ⠸⣿⡄     "
+echo -e "\033[35;1m  ⢠⣿⢿⣿⣿⠁\033[31;1m  ⠈⠳⠤⠶⠃  ⢰⡀    \033[35;1m   ⣠⣿⣿⠟⣱⠒⡠⢆⡴⣣⣯⢞⣴⡟⢿⡄⡏   ⡏⢷⡀   "
+echo -e "\033[35;1m ⡌⣿ ⠙⣿⡦⢀⣤⡴⣶⠖⣲⠆\033[31;1m⢀⠞⠁⠱   \033[35;1m  ⠠⣾⠟⠛⡡⠞⠁⢀⡴⢋⢎⣽⡿⣫⠋ ⠘⢷⠃⡄  ⡇⠈⣿⡀"
+echo -e "\033[35;1m ⣇⢹⣦ ⠼⢃⡾⢋⣶⢃⡼⣹⡳⠃⠊        ⠁   ⠈⠠⠋ ⡰⠋ ⢘⣇⡇ ⢠⠟ ⡇    ⢹⡵"      
+echo -e "\033[35;1m ⢻⣌⢿⡆ ⡝⣼⠟⣩⢏⣾⠟⠁                ⢀⠞    ⠈ ⣠⠏⣠⣾⡇    ⠘⣷"
+echo -e "\033[35;1m ⢸⣿⣿⣷⠆⢠⠏⡴⠃⡡⠋      ⣀⣠⠤⠔⠒⠤⣄⣀  ⢀⣰⠏    ⢀⣠⡾⠗⠋⢰⠏⡇  ⠘ ⠰⢻"
+echo -e "\033[35;1m ⣇ ⠘⣿⣿⣟⠻⣄⡞ ⠐⠁     ⣠⠞⣩⣤⣶⣶⣾⣷⣶⣬⣿⣿⣿⡏    ⠉⠉⠁   ⢸⡆⡇      "
+echo -e "\033[35;1m⠹⡄ ⠹⣿⣿⡄ ⠉⠉ ⡀  ⠈⢻⣾⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿           ⣼⣇⣧              "
+echo -e "\033[35;1m ⣿⢦⣀⠘⢿⣷⡀  ⡀⢦    ⠹⣿⣿⠏⠙⢻⣿⡿⠛⠉ ⠸⣿⠃         ⢀⣴⣿⣿⣿  ⡆  ⡀"
+echo -e "\033[35;1m⢼⣿ ⠈⢳⣤⣉⣻⣤⣀⣉⣩⠆    ⠹⡿  ⠈⡿    ⣸⡇      ⠓⠂ ⣠⣾⣿⣿⡿⢿⡄ ⣧  ⠹       "
+echo -e "\033[35;1m⣾⠃ ⣠⣿⣿⣿⣿⣿⣿⣄       ⡇  ⢸⡇  ⢠⠴⣿⡄       ⣠⣾⣿⣿⣿⡿⣧⣀⠧⣰⣻⢄  "
+echo -e "\033[35;1m⠛⠶⢾⣿⣽⣭⣽⣭⢹⣷ ⢹⣦⣀    ⡄  ⣸⡀  ⠁⣰⣧⣽    ⢀⣴⣾⣿⣿⡟⣻⣿⣿⣿⣿⢠⣿⣧⡸⣷⣄          "
+echo -e "\033[35;1m  ⠈⠙⠿⣿⣿⣿⠏ ⣾⣿⣿⣷⣦⣀ ⢇  ⠈⠁ ⣠⠔⠁    ⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠏⣼⣿⠏⣷⡈⠉       "
+echo -e "\033[35;1m       ⠙⠻⣶⣾⣿⣿⣿⣿⣿⣿⣷⣾⡆   ⡾⠁   ⣀⡴⠞⠛⣛⣿⡿⠿⠛⠛⠉⠉   ⢰⣿⡿⠂⠈⠻⡄      "
+echo -e "\033[35;1m         ⠙⢎⠉⠛⠻⠿⠿⠿⠿⠿⣇⠠⠸⣇⣀⣤⣴⣾⡭⠶⠛⠋⠉          ⣾⣿⠇   ⠘     "
+echo -e "\033[35;1m           ⠑⣤⡀     ⠈⣳ ⣿⠛⠻⠛⠉              ⣸⣿⡯     "
+  echo -e "\033[35;1m╔═══════════════════════════════╗"
+  echo -e "\033[35;1m║\033[33;1m [01]\033[32;1m. SQL                     ║"
+  echo -e "\033[35;1m║\033[33;1m [02]\033[32;1m. META                    ║"
+  echo -e "\033[35;1m║\033[33;1m [03]\033[32;1m. John the Ripper         ║"
+  echo -e "\033[35;1m║\033[33;1m [04]\033[32;1m. Module Termux           ║"
+  echo -e "\033[35;1m║\033[33;1m [05]\033[32;1m. Install Kali Linux      ║"
+  echo -e "\033[35;1m║\033[33;1m [06]\033[32;1m. Deface JSO Spam 5       ║"
+  echo -e "\033[35;1m║\033[33;1m [07]\033[32;1m. Galery Eyes APKTelegram ║"
+  echo -e "\033[35;1m║\033[33;1m [08]\033[32;1m. CCTV Server             ║"
+  echo -e "\033[35;1m║\033[33;1m [09]\033[32;1m. DDoS                    ║"
+  echo -e "\033[35;1m║\033[33;1m [10]\033[32;1m. Camphis                 ║"
+  echo -e "\033[35;1m╚═══════════════════════════════╝"
+ read -p "pilih >> " updt
+if [ $updt = 1 ] || [ $updt = 01 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 2 ] || [ $updt = 02 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 3 ] || [ $updt = 03 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 4 ] || [ $updt = 04 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 5 ] || [ $updt = 05 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 6 ] || [ $updt = 06 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 7 ] || [ $updt = 07 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 8 ] || [ $updt = 08 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 9 ] || [ $updt = 9 ]
+then
+clear
+pkg update upgrade -y
+fi
+if [ $updt = 10 ] || [ $updt = 10 ]
+then
+clear
+pkg update upgrade  -y
+fi
